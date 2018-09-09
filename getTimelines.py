@@ -20,7 +20,7 @@ params = {'count': 5}
 res = twitter.get(url, params = params)
 
 if res.status_code == 200:
-    # output timeline
+    # output
     timelines = json.loads(res.text)
     for line in timelines:
         print(line['user']['name']+'::'+line['text'])
